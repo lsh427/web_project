@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 오사카 여행</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-sky-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="#home" id="siteLogo" class="site-logo">오사카 여행기</a>
+            <!-- Desktop Navigation -->
+            <div id="desktopNavLinks" class="desktop-nav-links">
+                <a href="#introduction" class="nav-link">여행 소개</a>
+                <a href="#itinerary" class="nav-link">여행 일정</a>
+                <a href="#restaurants" class="nav-link">맛집 탐방</a>
+                <a href="#usj" class="nav-link">유니버셜 스튜디오</a>
+                <a href="#photos" class="nav-link">여행 사진첩</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburgerBtn" class="hamburger-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h2 class="text-xl font-bold text-sky-600">메뉴</h2>
+                <button id="closeMobileMenuBtn" class="mobile-menu-close-btn">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="#home" class="mobile-nav-link">홈</a>
+                <a href="#introduction" class="mobile-nav-link">여행 소개</a>
+                <a href="#itinerary" class="mobile-nav-link">여행 일정</a>
+                <a href="#restaurants" class="mobile-nav-link">맛집 탐방</a>
+                <a href="#usj" class="mobile-nav-link">유니버셜 스튜디오</a>
+                <a href="#photos" class="mobile-nav-link">여행 사진첩</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Home -->
+        <section id="home" class="hero-section">
+            <h1 class="hero-title">4박 5일 오사카 추억 여행</h1>
+            <p class="hero-subtitle">잊지 못할 순간들과 유용한 여행 팁을 공유합니다.</p>
+        </section>
+
+        <!-- 여행 소개 -->
+        <section id="introduction" class="py-12">
+            <h2 class="section-title">✈️ 여행 소개</h2>
+            <div class="content-box">
+                <p>안녕하세요! 2024년 7월 12일부터 16일까지, 4박 5일 동안 다녀온 일본 오사카 여행의 추억을 기록하고, 여러분께 유용한 정보를 공유하고자 이 웹사이트를 만들었습니다.</p>
+                <p>오사카는 맛있는 음식, 활기찬 거리, 그리고 친절한 사람들로 가득한 매력적인 도시였습니다. 이번 여행에서는 오사카의 유명 관광지를 둘러보고, 현지 맛집들을 탐방하며, 꿈에 그리던 유니버셜 스튜디오 재팬도 방문했답니다!</p>
+                <p>이곳에서 저의 생생한 여행 후기와 함께, 오사카 여행을 계획하시는 분들을 위한 작은 팁들을 확인해보세요.</p>
+            </div>
+        </section>
+        <hr class="separator">
+
+        <!-- 여행 일정 -->
+        <section id="itinerary" class="py-12">
+            <h2 class="section-title">🗓️ 여행 일정 (4박 5일)</h2>
+            <div class="space-y-8">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>1일차: 오사카 도착 & 도톤보리</h3>
+                        <ul>
+                            <li>간사이 국제공항 도착 후 난바역으로 이동</li>
+                            <li>숙소 체크인 및 짐 정리</li>
+                            <li>도톤보리 거리 탐방 (글리코상 인증샷!)</li>
+                            <li>저녁 식사: 오코노미야끼 & 타코야끼</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>2일차: 오사카 성 & 신세카이</h3>
+                        <ul>
+                            <li>오전: 오사카 성 방문 (천수각 관람)</li>
+                            <li>점심 식사: 근처 맛집에서 라멘</li>
+                            <li>오후: 신세카이 거리 구경 (츠텐카쿠 타워)</li>
+                            <li>저녁 식사: 쿠시카츠 전문점</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-content">
+                        <h3>3일차: 유니버셜 스튜디오 재팬 (USJ)</h3>
+                         <ul>
+                            <li>하루 종일 USJ 즐기기! (익스프레스 티켓 활용 추천)</li>
+                            <li>해리포터 존, 쥬라기 공원, 미니언 파크 등</li>
+                            <li>점심 및 저녁은 USJ 내 식당 이용</li>
+                            <li>퍼레이드 및 야간 쇼 관람</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                     <div class="card-content">
+                        <h3>4일차: 교토 당일치기 또는 오사카 쇼핑</h3>
+                        <p>(선택 사항으로 일정을 구성해보세요. 예시입니다.)</p>
+                        <ul>
+                            <li>옵션 1: 교토 당일치기 (기요미즈데라, 아라시야마 등)</li>
+                            <li>옵션 2: 오사카 시내 쇼핑 (신사이바시, 아메리카무라)</li>
+                            <li>저녁 식사: 마지막 밤을 위한 특별한 만찬 (예: 스키야키)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>5일차: 출국</h3>
+                        <ul>
+                            <li>오전: 기념품 쇼핑 및 짐 정리</li>
+                            <li>점심 식사: 공항으로 가기 전 간단한 식사</li>
+                            <li>간사이 국제공항으로 이동 및 출국 수속</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="separator">
+
+        <!-- 맛집 소개 -->
+        <section id="restaurants" class="py-12">
+            <h2 class="section-title">🍜 맛집 탐방</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="images/오코노미야끼.jpg" alt="오코노미야끼" class="card-image">
+                    <div class="card-content">
+                        <h3>치보 (CHIBO) - 오코노미야끼</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 도톤보리 근처</p>
+                        <p>두툼하고 다양한 재료가 들어간 오코노미야끼 전문점. 웨이팅이 있을 수 있지만 기다릴 가치가 있어요!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/이치란.jpg" alt="라멘" class="card-image">
+                    <div class="card-content">
+                        <h3>이치란 라멘 (Ichiran Ramen)</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 오사카 여러 지점</p>
+                        <p>혼밥하기 좋은 칸막이 좌석과 자신만의 스타일로 커스터마이징 가능한 돈코츠 라멘 맛집.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/쿠시카츠.png" alt="쿠시카츠" class="card-image">
+                    <div class="card-content">
+                        <h3>다루마 (Daruma) - 쿠시카츠</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 신세카이 본점</p>
+                        <p>다양한 꼬치튀김을 맛볼 수 있는 원조 쿠시카츠 가게. 소스는 한 번만 찍어 먹는 것이 규칙!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="separator">
+
+        <!-- 유니버셜 스튜디오 -->
+        <section id="usj" class="py-12">
+            <h2 class="section-title">🎢 유니버셜 스튜디오 재팬 (USJ)</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <img src="images/유니버셜.jpg" alt="USJ" class="rounded-lg shadow-xl w-full">
+                <div class="content-box">
+                    <h3 class="content-box-title">USJ 방문 팁 & 정보</h3>
+                    <ul>
+                        <li><strong>익스프레스 티켓:</strong> 성수기나 주말 방문 시 대기 시간을 줄이기 위해 익스프레스 티켓 구매를 고려해보세요.</li>
+                        <li><strong>개장 시간 공략:</strong> 공식 개장 시간보다 일찍 도착해서 인기 어트랙션을 먼저 이용하는 것이 좋습니다.</li>
+                        <li><strong>싱글 라이더:</strong> 혼자 또는 일행과 떨어져 타도 괜찮다면 싱글 라이더 줄을 이용하면 대기 시간을 단축할 수 있습니다.</li>
+                        <li><strong>필수 어트랙션:</strong> 해리포터 앤드 더 포비든 저니, 더 플라잉 다이너소어, 헐리우드 드림 더 라이드 등을 추천합니다.</li>
+                        <li><strong>앱 활용:</strong> USJ 공식 앱을 다운로드하면 대기 시간 확인, 쇼 스케줄 확인 등이 편리합니다.</li>
+                        <li><strong>기념품:</strong> 각 테마존마다 특색있는 기념품이 많으니 구경하는 재미도 쏠쏠합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr class="separator">
+
+        <!-- 여행 사진첩 -->
+        <section id="photos" class="py-12">
+            <h2 class="section-title">📸 여행 사진첩</h2>
+            <div id="galleryGrid" class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/도톤보리.jpg" alt="도톤보리" data-description="도톤보리의 화려한 밤">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/타코야끼.jpg" alt="타코야끼" data-description="맛있는 타코야끼">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/유니버셜로고.jpg" alt="USJ 지구본" data-description="유니버셜 스튜디오 지구본">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/오사카성봄.webp" alt="오사카 성" data-description="웅장한 오사카 성">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/신세카이.jpg" alt="신세카이" data-description="신세카이 거리 풍경">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                 <div class="gallery-item">
+                    <img src="images/음식점.jpg" alt="여행 사진" data-description="여행의 순간 6">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/신사이바시밤.jpg" alt="여행 사진" data-description="여행의 순간 7">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                 <div class="gallery-item">
+                    <img src="images/헤리포터.jpg" alt="여행 사진" data-description="여행의 순간 8">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/마리오.jpg" alt="여행 사진" data-description="여행의 순간 9">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/닌텐도렌드.webp" alt="여행 사진" data-description="여행의 순간 10">
+                    <div class="gallery-overlay"><p><i class="fas fa-search-plus"></i></p></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal hidden">
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="확대 이미지">
+                <p id="modalDescription"></p>
+                <button id="modalClose" class="modal-close-btn"><i class="fas fa-times"></i></button>
+                <button id="prevImage" class="modal-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextImage" class="modal-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>문의사항은 아래 메일로 보내주세요.</p>
+            <a href="#" class="footer-email">sanghyeok@sillain.ac.kr</a>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 [202306011] [이상혁]. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
