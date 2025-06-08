@@ -52,6 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
 
 
+    // --- 맛집 카드 링크 이동 ---
+    const restaurantsSection = document.getElementById('restaurants');
+    if (restaurantsSection) {
+        restaurantsSection.addEventListener('click', (e) => {
+            // 클릭된 요소 또는 그 부모 중에서 '.restaurant-card'를 찾습니다.
+            const card = e.target.closest('.restaurant-card');
+
+            // .restaurant-card가 존재하고, data-link 속성이 있는지 확인합니다.
+            if (card && card.dataset.link) {
+                window.open(card.dataset.link, '_blank');
+            }
+        });
+    }
+
+
     // --- 사진첩 모달 ---
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -131,3 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+

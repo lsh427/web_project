@@ -192,7 +192,38 @@ body {
 }
 .card:hover {
     transform: scale(1.05);
+
 }
+
+/* 위치 보기 */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+
+
 
 .card-image {
     width: 100%;

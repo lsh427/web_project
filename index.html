@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 오사카 여행</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
+
+    <!-- 스타일 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -58,7 +65,7 @@
             <h1 class="hero-title">4박 5일 오사카 추억 여행</h1>
             <p class="hero-subtitle">잊지 못할 순간들과 유용한 여행 팁을 공유합니다.</p>
         </section>
-
+        
         <!-- 여행 소개 -->
         <section id="introduction" class="py-12">
             <h2 class="section-title">✈️ 여행 소개</h2>
@@ -136,28 +143,39 @@
         <section id="restaurants" class="py-12">
             <h2 class="section-title">🍜 맛집 탐방</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card">
+                <div class="card restaurant-card" data-link="https://maps.app.goo.gl/kTkhQfpFhvYjKDwC7">
                     <img src="images/오코노미야끼.jpg" alt="오코노미야끼" class="card-image">
                     <div class="card-content">
                         <h3>치보 (CHIBO) - 오코노미야끼</h3>
                         <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 도톤보리 근처</p>
                         <p>두툼하고 다양한 재료가 들어간 오코노미야끼 전문점. 웨이팅이 있을 수 있지만 기다릴 가치가 있어요!</p>
                     </div>
+                    <div class="overlay">
+                        <div class="text">위치 보기</div>
+                    </div>
                 </div>
-                <div class="card">
+            
+                <div class="card restaurant-card" data-link="https://maps.app.goo.gl/eXHEhxPx9pSawwDz7">
                     <img src="images/이치란.jpg" alt="라멘" class="card-image">
                     <div class="card-content">
                         <h3>이치란 라멘 (Ichiran Ramen)</h3>
                         <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 오사카 여러 지점</p>
                         <p>혼밥하기 좋은 칸막이 좌석과 자신만의 스타일로 커스터마이징 가능한 돈코츠 라멘 맛집.</p>
                     </div>
+                    <div class="overlay">
+                        <div class="text">위치 보기</div>
+                    </div>
                 </div>
-                <div class="card">
+
+                <div class="card restaurant-card" data-link="https://maps.app.goo.gl/H7FW62MKQJ5BawiLA">
                     <img src="images/쿠시카츠.png" alt="쿠시카츠" class="card-image">
                     <div class="card-content">
                         <h3>다루마 (Daruma) - 쿠시카츠</h3>
                         <p class="card-location"><i class="fas fa-map-marker-alt mr-1"></i> 신세카이 본점</p>
                         <p>다양한 꼬치튀김을 맛볼 수 있는 원조 쿠시카츠 가게. 소스는 한 번만 찍어 먹는 것이 규칙!</p>
+                    </div>
+                    <div class="overlay">
+                        <div class="text">위치 보기</div>
                     </div>
                 </div>
             </div>
