@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 메뉴 부드러운 스크롤 ---
+    // --- 스크롤 ---
     function smoothScrollTo(targetId) {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 네비게이션 공통 로직 ---
+    // --- 네비게이션 ---
     document.querySelectorAll('.nav-link, .mobile-nav-link, .site-logo').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
