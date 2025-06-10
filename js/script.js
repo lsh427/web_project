@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 스크롤 ---
+    // --- 부드러운 스크롤 함수 ---
     function smoothScrollTo(targetId) {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
@@ -15,16 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 네비게이션 ---
+    // --- 네비게이션 공통 로직 ---
     document.querySelectorAll('.nav-link, .mobile-nav-link, .site-logo').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
 
-            // 모바일 메뉴가 열려있으면 닫기
             if (mobileMenu.classList.contains('open')) {
                 closeMobileMenu();
-                setTimeout(() => smoothScrollTo(targetId), 300); // 닫히는 애니메이션 후 스크롤
+                setTimeout(() => smoothScrollTo(targetId), 300);
             } else {
                 smoothScrollTo(targetId);
             }
@@ -53,31 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- 맛집 카드 링크 이동 ---
-    const restaurantsSection = document.getElementById('restaurants');
-    if (restaurantsSection) {
-        restaurantsSection.addEventListener('click', (e) => {
-            // 클릭된 요소 또는 그 부모 중에서 '.restaurant-card'를 찾습니다.
-            const card = e.target.closest('.restaurant-card');
-
-            // .restaurant-card가 존재하고, data-link 속성이 있는지 확인합니다.
-            if (card && card.dataset.link) {
-                window.open(card.dataset.link, '_blank');
+    document.querySelectorAll('.restaurant-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const link = card.dataset.link;
+            if (link) {
+                window.open(link, '_blank');
             }
         });
-    }
+    });
 
 
     // --- 사진첩 모달 ---
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const modalDescription = document.getElementById('modalDescription');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
     let currentImageIndex = 0;
-
+    
     galleryItems.forEach((item, index) => {
         item.addEventListener('click', () => {
             currentImageIndex = index;
-            showImageInModal(index);
+            showImageInModal(currentImageIndex);
         });
     });
 
@@ -113,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prevImage').addEventListener('click', () => changeImage(-1));
     document.getElementById('nextImage').addEventListener('click', () => changeImage(1));
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeImageModal(); // 배경 클릭 시 닫기
+        if (e.target === modal) closeImageModal();
     });
 
     document.addEventListener('keydown', (e) => {
@@ -146,7 +141,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
-
